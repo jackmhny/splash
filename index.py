@@ -3,10 +3,10 @@ from flask import Flask
 from flask import request
 from flask import g
 
-# from flask_cors import CORS
+from flask_cors import CORS
 
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 
 data = {}
 
