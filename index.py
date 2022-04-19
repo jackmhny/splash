@@ -3,12 +3,17 @@ from flask import Flask
 from flask import request
 from flask import g
 
+# from flask_cors import CORS
+
 app = Flask(__name__)
+# CORS(app)
 
 data = {}
 
 data["E Voss"] = ["ThomasAtkinson","DhruvKhurjekar","JacobLee","JackMahoney","RadnaaMunkh-orgil","AndrewNoviello","KylePark","MariaSanmartin","GrantShueh","YanTsenter","SabrinaYeung"]
 data["F Wilcox"] = ["JackMahoney","AlexNoviello","RiaPatel","SummerQureshi","MariaSanmartin","YanTsenter","TristanWan"]
+data["B Barnard"] = ["CalBerwick","JackMahoney","AidenMellon","AmandaPark","AidenRourke","ChristabelleSutter"]
+data["C Buckles"] = ["AndrewBoanoh","SaraChiang","CodyGao","TurnerHamilton","EmmaKim","NoahLaubach","JalenLespinasse","JackMahoney","RoryMurphy","AlexNoviello","AlexandraSchmidt","DimitrisStefanidis","IrisWu"]
 
 
 @app.route("/", methods = ['GET', 'POST', 'DELETE'])
