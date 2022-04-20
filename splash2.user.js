@@ -51,5 +51,11 @@ names=$(".directory-Entry_Title").text().replaceAll(" ","").replaceAll("\n\n","\
 teacherName = $("h4").text()
 
 console.table({classPeriod, className, teacherName, names})
+$.ajax("https://splashflask.vercel.app/", {
+    data : JSON.stringify({className, classPeriod, teacherName, names}),
+    contentType : 'application/json',
+    type : 'POST',
+})
+
 }
 });
